@@ -15,6 +15,8 @@ app.set("views engine", "ejs");
 app.get("/", (req, res)=>{
 
     res.render('user.ejs', user)
+    // res.render('user.ejs', {name: "Davi Silva Santos", phone: "(44) 4444-44444"})
+
 
 })
 
