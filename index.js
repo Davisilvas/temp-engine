@@ -1,29 +1,18 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const app = express();
-const port = 3000;
+// const port = 3000;
 
-let user = {
-    id: 0,
-    name: "Davi 'Wulfric' Santos",
-    tel: "(24) 993287911",
-}
-
-function render (data, obj){
-    for (let key in obj){
-        data = data.replace(`{{{${key}}}}`, obj[key])
-    }
-    return data;
-}
+app.set("views", path.join(__dirname, 'views'));
+app.set("views engine", "ejs");
 
 app.get("/", (req, res)=>{
-    fs.readFile('./templates/user.html', 'UTF8', (err, data) =>{
-        if(!err){
-            res.send(render(data, user));
-        }
-    })
+
+    res.render('user.ejs')
+
 })
 
-app.listen(`${port}`, () =>{
-    console.log(`server running on ${port}...`)
+app.listen(3000, () =>{
+    console.log(`server running...`)
 })
