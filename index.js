@@ -5,15 +5,14 @@ const port = 3000;
 
 let user = {
     id: 0,
-    name: "Davi Silva Santos",
+    name: "Davi 'Wulfric' Santos",
     tel: "(24) 993287911",
 }
 
 function render (data, obj){
-    for (key in obj){
+    for (let key in obj){
         data = data.replace(`{{{${key}}}}`, obj[key])
     }
-
     return data;
 }
 
