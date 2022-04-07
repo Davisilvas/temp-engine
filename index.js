@@ -6,14 +6,17 @@ const port = 3000;
 
 let users1 = [
     {
+    id: 0,        
     name: "Davi Silva Sauro",
     phone: "2444-66666"
 },
 {
+    id: 1,
     name: "Maria",
     phone: "2444-66666"
 },
 {
+    id: 2,
     name: "Doly",
     phone: "2444-66666"
 }
