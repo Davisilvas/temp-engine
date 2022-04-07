@@ -31,6 +31,10 @@ app.get("/", (req, res)=>{
     res.render('user.ejs', {users: users1})
 })
 
+app.get("/about", (req, res) =>{
+    res.render('about.ejs');
+})
+
 app.listen(3000, () =>{
     console.log(`server running on port ${port}...`)
 })

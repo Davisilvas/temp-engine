@@ -8,6 +8,8 @@
 </head>
 <body>
     
+    <%- include('partials/navBar.ejs', {title: 'Users'})%>
+
     <% for(let user of users)  {%>
         <%if (user.id % 2 ==0){%>
             <h1><%=user.name%></h1>
